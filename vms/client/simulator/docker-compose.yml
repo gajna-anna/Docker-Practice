@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+  temp_sensor:
+    image: annagajna/data-simulator
+    environment:
+      - SIM_HOST=192.168.0.101
+      - SIM_NAME=TEMP1
+      - SIM_PERIOD=2
+      - SIM_TYPE=temperature
+  pressure_sensor:
+    image: annagajna/data-simulator
+    environment:
+      - SIM_HOST=192.168.0.101
+      - SIM_NAME=PRESS1
+      - SIM_PERIOD=2
+      - SIM_TYPE=pressure
+  current_sensor:
+    image: annagajna/data-simulator
+    environment:
+      - SIM_HOST=192.168.0.101
+      - SIM_NAME=CURRENT1
+      - SIM_PERIOD=2
+      - SIM_TYPE=current
+  co_sensor:
+    image: annagajna/data-simulator
+    environment:
+      - SIM_HOST=192.168.0.101
+      - SIM_NAME=CO1
+      - SIM_PERIOD=2
+      - SIM_TYPE=carbon_oxid
+  temp_sensor_2:
+    image: annagajna/data-simulator
+    environment:
+      - SIM_HOST=192.168.0.101
+      - SIM_NAME=TEMP2
+      - SIM_PERIOD=4
+      - SIM_TYPE=temperature
+  co_sensor_2:
+    image: annagajna/data-simulator
+    environment:
+      - SIM_HOST=192.168.0.101
+      - SIM_NAME=CO2
+      - SIM_PERIOD=6
+      - SIM_TYPE=carbon_oxid
